@@ -14,6 +14,8 @@ The second command generates many more files.  It generates an associated model,
 
 The Rails official docs regarding `rails generate` lives here http://guides.rubyonrails.org/command_line.html#rails-generate
 
+And some more advanced generator shortcuts can be found here https://richonrails.com/articles/rails-model-generator-shortcuts
+
 Here are all the types that be used for fields on models:
 ```
 integer
