@@ -1,0 +1,27 @@
+<%= form_with(model: new_model, local: true) do |form| %>
+  <% if new_model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(new_model.errors.count, "error") %> prohibited this new_model from being saved:</h2>
+
+      <ul>
+      <% new_model.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :new_model_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email_address %>
+    <%= form.text_field :email_address, id: :new_model_email_address %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

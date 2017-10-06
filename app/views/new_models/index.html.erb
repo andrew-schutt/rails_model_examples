@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>New Models</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Email address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @new_models.each do |new_model| %>
+      <tr>
+        <td><%= new_model.description %></td>
+        <td><%= new_model.email_address %></td>
+        <td><%= link_to 'Show', new_model %></td>
+        <td><%= link_to 'Edit', edit_new_model_path(new_model) %></td>
+        <td><%= link_to 'Destroy', new_model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New New Model', new_new_model_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @new_model.description %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @new_model.email_address %>
+</p>
+
+<%= link_to 'Edit', edit_new_model_path(@new_model) %> |
+<%= link_to 'Back', new_models_path %>
